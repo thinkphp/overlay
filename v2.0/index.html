@@ -19,11 +19,7 @@
   <script type="text/javascript">
           window.addEvent('domready',function(){
 
-                 $('openoverlay').addEvent('click',function(e){
-
-                      if(e) {e.stop();}
-
-                      new Overlay(document.body,{
+                 var overlay = new Overlay(document.body,{
                           onClick: function(){
                              this.close();
                           },
@@ -39,8 +35,13 @@
                           onOpen: function() {
                              alert('open');
                           }
-                      }).open();
-                      
+                  });
+
+                 $('openoverlay').addEvent('click',function(e){
+
+                      if(e) {e.stop();}
+ 
+                      overlay.open();                                            
                  });
           });
   </script>
