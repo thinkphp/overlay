@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+   <title>MooTools Plugin Overlay</title>
+   <link rel="stylesheet" href="http://yui.yahooapis.com/2.7.0/build/reset-fonts-grids/reset-fonts-grids.css" type="text/css">
+   <style type="text/css">
+   html,body{background:#666;color:#000;}
+   #doc{background:#fff;border:1em solid #fff;-moz-border-radius:5px;font-family:calibri,helvetica,arial,sans-serif;}
+   h1{font-size: 300%;padding-bottom: 0px;color: #000;text-transform:capitalize;text-align: left;margin-left: 0px}
+   #ft {color: #ccc;}
+   #openoverlay{border: 1px solid rgb(204, 204, 204); padding: 5px 10px; background: rgb(238, 238, 238) none repeat scroll 0% 0%; display: block; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous; font-weight: bold; font-size: 14px; width: 100px; text-align: center;}              
+   #bd{height: 400px}
+   a{color: #444;text-decoration: none}
+   .intro{-moz-background-clip:border;-moz-background-inline-policy:continuous;-moz-background-origin:padding;background:#ffff99 none repeat scroll 0 0;font-style:italic;margin-bottom:20px;padding:5px 10px;}
+   pre{margin: 10px}
+  </style>
+  <script type="text/javascript" src="moo.js"></script>
+  <script type="text/javascript" src="overlay.js"></script>
+  <script type="text/javascript">
+        //once 'domReady' is on then execute it
+        window.addEvent('domready',function(){
+
+               var overlay = new Overlay(document.body,{
+ 
+                           id: 'overlay',
+
+                           color: '#393',
+
+                           duration: 300,
+
+                           opacity: 0.4,
+
+                           onClick: function() {
+
+                                this.close();
+                           } 
+               });
+
+               $('openoverlay').addEvent('click',function() {
+
+                     overlay.open();  
+               });
+        });//end domready
+  </script>
+</head>
+<body>
+<div id="doc" class="yui-t7">
+   <div id="hd" role="banner"><h1>MooTools Plugin Overlay</h1></div>   
+   <div id="bd" role="main">
+        <p class="intro">Click on the 'open overlay' button below to see the overlay display. To hide the overlay, click anywhere within it.</p>
+	<div class="yui-g">
+            <a href="#" id="openoverlay">open overlay</a>
+<pre>
+ var overlay = new Overlay(document.body,{
+ 
+                           id: 'overlay',
+
+                           color: '#393',
+
+                           duration: 300,
+
+                           opacity: 0.4,
+
+                           onClick: function() {
+
+                                this.close();
+                           } 
+               });
+
+               $('openoverlay').addEvent('click',function() {
+
+                     overlay.open();  
+               });
+
+</pre>              
+	</div>
+	</div>
+   <div id="ft" role="contentinfo"><p>Written By Adrian Statescu</p></div>
+</div>
+</body>
+</html>
