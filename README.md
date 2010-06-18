@@ -80,7 +80,35 @@ Overlay Method: constructor (#Overlay: constructor)
 
    onShow();
 
+How to use
+----------
 
+
+### Javascript
+
+    new Overlay(document.body,{
+        id: 'overlay',
+        color: '#000',
+        duration: 400,
+        opacity: 0.4,
+        onClick: function(){
+             this.close();
+        },
+        onOpen: function(){
+             //do something while overlay is happening...
+             alert('open'); 
+        },
+        onShow: function(){
+             //the overlay has been completed
+             alert('Show'); 
+        },
+        onClose: function(){
+             alert('close'); 
+        },
+        onHide: function(){
+             alert('hide'); 
+        }     
+    }).open();
 
 
 
