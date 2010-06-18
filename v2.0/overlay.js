@@ -81,7 +81,7 @@ var Overlay = new Class({
                width: this.container.getScrollSize().x,
                height: this.container.getScrollSize().y
        });
-  
+      return this;
     },
 
     tweenComplete: function(){
