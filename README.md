@@ -26,6 +26,11 @@ Overlay Method: constructor (#Overlay: constructor)
 * opacity - (*float*, default to 0.5) - The destination opacity level of the overlay.
 * zIndex - (*integer*, default to 5000) - The 'z-index' of the overlay.
 
+
+### Returns:
+
+* (*Object*) A new Overlay instance.
+
 ### Events:
 
 ### click
